@@ -16,6 +16,10 @@
   }
 }
 
+.manrope{
+  font-family: var(--font-manrope);
+}
+
 
 @layer utilities {
   .text-balance {

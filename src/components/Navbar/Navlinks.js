@@ -11,7 +11,7 @@ const Navlinks = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6  ">
+    <nav className="flex items-center justify-between px-6  manrope ">
       <div className="flex items-center xl:space-x-8 space-x-4 max-md:hidden">
         <Link
           href="/"
