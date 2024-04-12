@@ -87,7 +87,7 @@ const Carousel = ({ images, h, w }) => {
         <GrFormPreviousLink />
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl bg-black  rounded-full focus:outline-none"
+        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-2xl bg-black  rounded-full focus:outline-none"
         onClick={nextImage}
       >
         <GrFormNextLink />
