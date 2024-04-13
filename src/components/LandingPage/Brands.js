@@ -6,10 +6,10 @@ import "react-multi-carousel/lib/styles.css";
 import ipca from "@/assets/clients/ipca.webp";
 import max from "@/assets/clients/max.jpg";
 
-const brands = [ipca, max];
+const brands = [ipca, max, ipca, max, ipca, max, ipca, max];
 
 const responsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 1424 }, items: 7 },
+  superLargeDesktop: { breakpoint: { max: 4000, min: 1424 }, items: 4 },
   desktop: { breakpoint: { max: 1424, min: 1000 }, items: 3 },
   tablet: { breakpoint: { max: 1000, min: 740 }, items: 2 },
   mobile: { breakpoint: { max: 740, min: 0 }, items: 1 },
@@ -34,23 +34,21 @@ const Brands = () => {
 
   return (
     <div className="w-full text-black">
-      <div className="max-w-screen-2xl mx-auto px-3">
+      <div className="max-w-screen-2xl mx-auto">
         <Carousel
           autoPlay={true}
           responsive={responsive}
           infinite={true}
           containerClass="carousel-container"
+          arrows={false}
         >
           {brands.map((brand, index) => (
-            <div
-              key={index}
-              className="max-w-xs overflow-hidden justify-center items-center mx-auto"
-            >
-              <div className="flex items-center justify-center">
+            <div className="max-w-xs overflow-hidden justify-center items-center mx-auto">
+              <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black">
                 <Image
                   src={brand}
                   alt={`Brand ${index}`}
-                  className="w-28 h-32"
+                  className="w-24 h-32"
                 />
               </div>
             </div>
