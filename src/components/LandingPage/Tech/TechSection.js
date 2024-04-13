@@ -3,8 +3,8 @@ import techData from "@/data/techData";
 
 function TechSection() {
   return (
-    <div className="mt-16 container text-center mx-auto">
-      <div className="flex flex-wrap justify-center gap-x-10">
+    <div className="mt-16 text-center ">
+      <div className="flex flex-wrap justify-center gap-x-10 mx-auto gap-y-6 px-2  ">
         {techData.map((tech, index) => (
           <TechCards
             imageUrl={tech.imageUrl}

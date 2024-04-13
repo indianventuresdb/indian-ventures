@@ -23,9 +23,9 @@ const techData = [
   },
   {
     imageUrl: tech,
-    altText: "Technology",
+    altText: "technology",
     title: "TECHNOLOGY",
-    items: ["JavaScript", "React.js", "Node.js", "MongoDB", "Express"],
+    items: ["Javascript", "React", "Node", "MongoDB", "Express"],
   },
 ];
 

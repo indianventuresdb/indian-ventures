@@ -10,6 +10,9 @@ import service4 from "@/assets/services/service4.png";
 import service5 from "@/assets/services/service5.png";
 import TechSection from "./Tech/TechSection";
 import Industries from "./industries";
+import Testimonials from "./Testimonials";
+import Form from "./Form";
+import Brands from "./Brands";
 
 function HeroSection() {
   return (
@@ -22,13 +25,15 @@ function HeroSection() {
       <ServiceSection
         images={[service1, service2, service3, service4, service5]}
       />
-
       <button className="bg-black text-white text-sm sm:text-lg manrope sm:px-10 px-7 py-2 rounded-[10px] flex justify-center mx-auto items-center font-bold">
         Read More
       </button>
       <Heading>TECHNOLOGIES</Heading>
       <TechSection />
       <Industries />
+      <Form />
+      <Testimonials />
+      <Brands />
     </div>
   );
 }

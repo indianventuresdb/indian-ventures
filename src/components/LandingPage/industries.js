@@ -6,7 +6,6 @@ import Image from "next/image";
 import ecom from "@/assets/industry/ecom.png";
 import healthcare from "@/assets/industry/healthcare.png";
 
-// Constants
 const INDUSTRIES = [
   { image: ecom, name: "E-Commerce" },
   { image: healthcare, name: "Healthcare" },
