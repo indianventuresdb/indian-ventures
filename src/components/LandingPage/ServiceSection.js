@@ -3,8 +3,10 @@ import Image from "next/image";
 
 const ServiceCard = ({ image }) => {
   return (
-    <div className="bg-white shadow-inner shadow-current rounded-lg p-4 m-2 ">
-      <Image src={image} alt="Service" className="w-full h-auto " />
+    <div className="max-w-xs overflow-hidden justify-center items-center mx-auto">
+      <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black px-4">
+        <Image src={image} alt={`Image `} className="w-48 h-48" />
+      </div>
     </div>
   );
 };
