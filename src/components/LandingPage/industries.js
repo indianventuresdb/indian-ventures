@@ -51,7 +51,10 @@ const Industries = () => {
           containerClass="carousel-container"
         >
           {INDUSTRIES.map((industry, index) => (
-            <div className="max-w-xs overflow-hidden justify-center items-center mx-auto ">
+            <div
+              key={index}
+              className="max-w-xs overflow-hidden justify-center items-center mx-auto"
+            >
               <div className="flex items-center justify-center">
                 <Image
                   src={industry.image}

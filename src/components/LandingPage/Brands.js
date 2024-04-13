@@ -43,7 +43,10 @@ const Brands = () => {
           arrows={false}
         >
           {brands.map((brand, index) => (
-            <div className="max-w-xs overflow-hidden justify-center items-center mx-auto">
+            <div
+              key={index}
+              className="max-w-xs overflow-hidden justify-center items-center mx-auto"
+            >
               <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black">
                 <Image
                   src={brand}
