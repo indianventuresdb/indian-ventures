@@ -2,6 +2,7 @@ import "./globals.css";
 import { Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const manrope_init = Manrope({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <div className="max-w-screen-2xl mx-auto">{children}</div>
         <Footer />
       </body>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID} />
     </html>
   );
 }
