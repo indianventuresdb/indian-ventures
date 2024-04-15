@@ -28,7 +28,7 @@ const Navlinks = () => {
           About us
         </Link>
         <Link
-          href="/technologies"
+          href="/technology"
           className="text-mblack
            text-lg font-semibold hover:text-gray-500"
         >
@@ -69,7 +69,7 @@ const Navlinks = () => {
             About us
           </Link>
           <Link
-            href="/technologies"
+            href="/technology"
             className="text-mblack
              text-lg font-semibold mb-4 hover:text-gray-500"
           >
