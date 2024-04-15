@@ -49,19 +49,19 @@ const pageData = [
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-1 gap-8 mx-3 sm:mx-20 h-[30%]">
+    <div className="grid grid-cols-1 gap-8 mx-3 sm:mx-20">
       {pageData.map((service, index) => (
         <div
           key={index}
           className="grid grid-cols-1 md:grid-cols-2 border-4 border-[#D9D9D9] shadow-md sm:rounded-3xl bg-[#ECECEC]"
         >
-          <div className="relative h-80 md:h-[15rem] rounded-t-3xl ">
+          <div className="relative h-80 md:h-auto sm:rounded-t-3xl sm:rounded-bl-3xl">
             <Image
               src={service.image}
               alt={`Service ${index + 1}`}
               layout="fill"
               objectFit="cover"
-              className="sm:rounded-l-3xl h-full w-full"
+              className=" md:rounded-l-3xl sm:rounded-none"
             />
           </div>
           <div className="p-4 flex flex-col justify-center">
