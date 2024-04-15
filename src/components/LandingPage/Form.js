@@ -191,7 +191,7 @@ const Form = () => {
               type="text"
               name="name"
               placeholder="Your Name"
-              className={`px-2 py-2 bg-gray-100 text-gray-500  ${
+              className={`px-2 py-2 bg-white text-gray-500  ${
                 !isValidName ? "border-2 border-red-500" : ""
               }`}
               value={data.name}
@@ -201,7 +201,7 @@ const Form = () => {
               type="text"
               name="brand"
               placeholder="Brand Name/Company Name"
-              className={`px-2 py-2 bg-gray-100 text-gray-500 ${
+              className={`px-2 py-2 bg-white text-gray-500 ${
                 !isValidBrand ? "border-2 border-red-500" : ""
               }`}
               value={data.brand}
@@ -214,7 +214,7 @@ const Form = () => {
               type="email"
               name="email"
               placeholder="Your Email"
-              className={`px-2 py-2 bg-gray-100 text-gray-500 ${
+              className={`px-2 py-2 bg-white text-gray-500 ${
                 !isValidEmail ? "border-2 border-red-500" : ""
               }`}
               value={data.email}
@@ -224,7 +224,7 @@ const Form = () => {
               type="text"
               name="phone"
               placeholder="Your Phone No"
-              className={`px-2 py-2 bg-gray-100 text-gray-500 ${
+              className={`px-2 py-2 bg-white text-gray-500 ${
                 !isValidPhone
                   ? "border-2 border-red-500"
                   : "Please enter a valid 10 or 11-digit phone number. "
@@ -241,7 +241,7 @@ const Form = () => {
               </label>
               <select
                 name="service"
-                className={`w-full py-2 bg-gray-100 text-gray-500 ${
+                className={`w-full py-2 bg-white text-gray-500 ${
                   !isValidService ? "border-2 border-red-500" : ""
                 }`}
                 onChange={handleInputChange}
@@ -267,7 +267,7 @@ const Form = () => {
               </label>
               <select
                 name="budget"
-                className={`w-full py-2 bg-gray-100 text-gray-500  text-lg sm:text-xl${
+                className={`w-full py-2 bg-white text-gray-500  text-lg sm:text-xl${
                   !isValidBudget ? "border-2 border-red-500" : ""
                 }`}
                 onChange={handleInputChange}
@@ -286,7 +286,7 @@ const Form = () => {
             name="message"
             placeholder="Describe Your Services in few words"
             rows="5"
-            className="text-lg sm:text-xl w-full px-2 py-2 bg-gray-100 text-gray-500"
+            className="text-lg sm:text-xl w-full px-2 py-2 bg-white text-gray-500"
             value={data.message}
             onChange={handleInputChange}
           />

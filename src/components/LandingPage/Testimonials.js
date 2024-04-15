@@ -52,7 +52,9 @@ const Testimonials = () => {
   return (
     <div className="w-full text-black manrope">
       <div className="max-w-screen-2xl mx-auto p-4">
-        <h2 className="text-center font-bold">WHY CHOOSE INDIAN VENTURES</h2>
+        <h3 className="text-center font-bold text-lg sm:text-2xl uppercase">
+          Why choose indian ventures
+        </h3>
         <Carousel
           autoPlay={true}
           responsive={responsive}

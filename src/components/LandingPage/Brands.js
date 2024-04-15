@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ipca from "@/assets/clients/ipca.webp";
 import max from "@/assets/clients/max.jpg";
+import ipca from "@/assets/clients/ipca.webp";
 
 const brands = [ipca, max, ipca, max, ipca, max, ipca, max];
 
@@ -34,6 +34,9 @@ const Brands = () => {
 
   return (
     <div className="w-full text-black">
+      <h3 className="text-center font-bold text-lg sm:text-2xl">
+        VALUABLE CLIENTS
+      </h3>
       <div className="max-w-screen-2xl mx-auto">
         <Carousel
           autoPlay={true}
@@ -45,7 +48,7 @@ const Brands = () => {
           {brands.map((brand, index) => (
             <div
               key={index}
-              className="max-w-xs overflow-hidden justify-center items-center mx-auto"
+              className="max-w-xs overflow-hidden justify-center items-center mx-auto mt-10"
             >
               <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black">
                 <Image
