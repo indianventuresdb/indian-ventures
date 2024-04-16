@@ -57,10 +57,10 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
   const mobElementPos = [
     { top: "50px", left: "16%" },
     { top: "50px", left: "80%" },
-    { top: "200px", left: "50%" },
+    { top: "120px", left: "50%" },
     { top: "50px", left: "50%" },
-    { top: "200px", left: "16%" },
-    { top: "200px", left: "80%" },
+    { top: "120px", left: "16%" },
+    { top: "120px", left: "80%" },
   ];
 
   const cmsSlide = [cms1, cms2, cms3];
@@ -102,8 +102,8 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
           src={link.imageUrl}
           alt={`Image ${index}`}
           title={`Image ${index}`}
-          width={80}
-          height={40}
+          width={90}
+          height={50}
           className="max-w-60 max-h-60"
         />
         <p className="text-center text-xs sm:text-lg font-medium">
@@ -115,14 +115,14 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
 
   return (
     <section className={sectionClass}>
-      <div className="mt-16 mx-4 sm:mx-10 manrope">
+      <div className="mt-10 mx-4 sm:mx-10 manrope">
         <h3 className="my-5 font-bold px-5 text-2xl sm:text-4xl uppercase text-center">
           {title}
         </h3>
         <div className="bg-[#ECECEC] shadow-md shadow-black w-full flex flex-wrap">
           <div className="w-full sm:w-1/2 ">
             <div style={{ height: "100%" }}>
-              <Carousel images={displayedImages} h={300} w={960 / 3} />
+              <Carousel images={displayedImages} h={340} w={960 / 3} />
             </div>
           </div>
           <div className="w-full sm:w-1/2 ">
