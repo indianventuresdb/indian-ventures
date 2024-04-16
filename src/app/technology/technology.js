@@ -8,7 +8,7 @@ const Technology = ({ userInfo }) => {
     <>
       <div className="sm:space-y-0 mb-5" style={{ fontFamily: "sans-serif" }}>
         {/* Mobile section */}
-        <h1 className="text-4xl text-black text-center mt-4 font-bold mb-4">
+        <h1 className="text-2xl sm:text-4xl text-black text-center mt-4 font-bold mb-4">
           TECHNOLOGIES
         </h1>
         <CarouselSection

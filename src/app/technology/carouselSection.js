@@ -91,7 +91,7 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
     return getImages().map((link, index) => (
       <div
         key={index}
-        className="flex flex-col items-center manrope"
+        className="flex flex-col items-center manrope justify-center"
         style={{
           top: mobElementPos[index]?.top || "0",
           left: mobElementPos[index]?.left || "0",
