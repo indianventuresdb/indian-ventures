@@ -1,20 +1,15 @@
+"use client";
 import React from "react";
-import ImageCard from "../components/technology/ImageCard";
-import CarouselSection from "../components/CarouselSection";
-import { mobileImages, cmsImages, techImages } from "@/assets";
-
+import CarouselSection from "./carouselSection";
+import { mobileImages } from "@/assets";
+import { cmsImages } from "@/assets";
+import { techImages } from "@/assets";
 const Technology = ({ userInfo }) => {
   return (
     <>
-      <div className="sm:space-y-0 mb-5" style={{ fontFamily: "sans-serif" }}>
-        <div className="absolute sm:flex text-white gap-14 space-y-7 sm:space-y-0 rounded-full">
-          <ImageCard imageSrc="/image132.png" scrollTarget=".mobile-section" />
-          <ImageCard imageSrc="/image50.png" scrollTarget=".CMS-section" />
-          <ImageCard imageSrc="/image133.png" scrollTarget=".tech-section" />
-        </div>
-
+      <div className=" sm:space-y-0 mb-5 manrope">
         {/* Mobile section */}
-        <h1 className="text-4xl text-black text-center mt-4 font-bold mb-4">
+        <h1 className="text-2xl sm:text-5xl text-black text-center mt-4 font-extrabold mb-4">
           TECHNOLOGIES
         </h1>
         <CarouselSection
