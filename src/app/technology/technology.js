@@ -1,15 +1,14 @@
-"use client";
 import React from "react";
+import ImageCard from "./ImageCard";
 import CarouselSection from "./carouselSection";
-import { mobileImages } from "@/assets";
-import { cmsImages } from "@/assets";
-import { techImages } from "@/assets";
+import { mobileImages, cmsImages, techImages } from "@/assets";
+
 const Technology = ({ userInfo }) => {
   return (
     <>
-      <div className=" sm:space-y-0 mb-5 manrope">
+      <div className="sm:space-y-0 mb-5" style={{ fontFamily: "sans-serif" }}>
         {/* Mobile section */}
-        <h1 className="text-2xl sm:text-5xl text-black text-center mt-4 font-extrabold mb-4">
+        <h1 className="text-4xl text-black text-center mt-4 font-bold mb-4">
           TECHNOLOGIES
         </h1>
         <CarouselSection
