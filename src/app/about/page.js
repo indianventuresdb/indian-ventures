@@ -11,7 +11,7 @@ const Page = () => {
           alt="backgroundImage"
           className="object-cover w-[1531px] h-[621px] mx-auto"
         />
-        <div className="absolute inset-0  flex flex-col justify-center items-center text-white bg-gray-700 bg-opacity-50 manrope">
+        <div className="absolute inset-0  flex flex-col justify-center items-center text-white bg-gray-900 bg-opacity-75 manrope">
           <h1 className="text-2xl md:text-3xl font-extrabold sm:mb-6 mb-2 uppercase">
             About Us
           </h1>
