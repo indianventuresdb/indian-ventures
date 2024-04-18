@@ -55,7 +55,7 @@ const Services = () => {
           key={index}
           className="grid grid-cols-1 md:grid-cols-2 border-4 border-[#D9D9D9] shadow-md sm:rounded-3xl bg-[#ECECEC] "
         >
-          <div className=" w-[60%] relative  min-h-[16rem] sm:rounded-t-3xl sm:rounded-bl-3xl ">
+          <div className=" w-[80%] relative  min-h-[16rem] sm:rounded-t-3xl sm:rounded-bl-3xl ">
             <Image
               src={service.image}
               alt={`Service ${index + 1}`}
@@ -64,11 +64,11 @@ const Services = () => {
               className=" md:rounded-l-3xl sm:rounded-none"
             />
           </div>
-          <div className="w-[80%] p-4 flex flex-col justify-center">
+          <div className="w-[80%] flex flex-col justify-center">
             <h2 className="text-xl font-bold mb-4 text-center">
               {service.heading}
             </h2>
-            <p className="text-justify px-6">{service.content}</p>
+            <p className="text-justify ">{service.content}</p>
           </div>
         </div>
       ))}
