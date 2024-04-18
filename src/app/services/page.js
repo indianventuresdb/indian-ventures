@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import service from "@/assets/contact.jpg";
+import service from "@/assets/services.png";
 import Services from "./services";
 
 const page = () => {

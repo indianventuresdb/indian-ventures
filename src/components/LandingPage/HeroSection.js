@@ -15,8 +15,39 @@ import Industries from "./industries";
 import Testimonials from "./Testimonials";
 import Form from "./Form";
 import Brands from "./Brands";
+import Link from "next/link";
 
 function HeroSection() {
+  const services = [
+    {
+      image: service1,
+      title: "Creative Agency",
+      content: `Provoking powerful decisions with Branding solutions `,
+    },
+
+    {
+      image: service2,
+      title: "Startup Solutions",
+      content: `Putting big brand experience to work for startups and SMBs.`,
+    },
+
+    {
+      image: service3,
+      title: "Innovative Web Solutions",
+      content: `Let's create the best website to build your online presence.`,
+    },
+    {
+      image: service4,
+      title: "Mobile Application Design",
+      content: `Bring your brand in everyone's hand with your smart mobile application.`,
+    },
+    {
+      image: service5,
+      title: "Digital Marketing",
+      content: `We as digital marketers allows businesses to target specific audiences and track the success of their campaigns in real-time.`,
+    },
+  ];
+
   return (
     <div className=" justify-center h-auto space-y-10 mb-1 manrope">
       <Carousel images={[slider1, slider2]} h={420} w={1152} />
@@ -24,12 +55,12 @@ function HeroSection() {
       <p className="text-center font-normal text-lg">
         No Compromise Solution To Your Web Or App Development
       </p>
-      <ServiceSection
-        images={[service1, service2, service3, service4, service5]}
-      />
-      <button className="bg-black text-white text-sm sm:text-lg manrope sm:px-10 px-7 py-2 rounded-[10px] flex justify-center mx-auto items-center font-bold">
-        Read More
-      </button>
+      <ServiceSection services={services} />
+      <Link href="/services">
+        <button className="bg-black mt-10 hover:bg-slate-600 text-white text-sm sm:text-lg manrope sm:px-10 px-7 py-2 rounded-[10px] flex justify-center mx-auto items-center font-bold">
+          Read More
+        </button>
+      </Link>
       <Heading>TECHNOLOGIES</Heading>
       <TechSection />
       <Industries />

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import contact from "@/assets/contact.jpg";
+import contact from "@/assets/contact.png";
 import ContactForm from "./contactForm";
 const page = () => {
   return (

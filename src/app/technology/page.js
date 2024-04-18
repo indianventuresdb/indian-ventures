@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import bgImage from "@/assets/bgTech.png";
+import technology from "@/assets/technology.png";
 import Technology from "./technology";
 import mobile from "@/assets/IT/Mobile.png";
 import cms from "@/assets/IT/cms.png";
@@ -13,8 +13,8 @@ const Page = () => {
     <>
       <div className="relative ">
         <Image
-          src={bgImage}
-          alt="bgImage"
+          src={technology}
+          alt="technology"
           className="object-cover w-[1531px] h-[621px] mx-auto"
         />
         <div className="absolute inset-0 flex justify-center items-center">

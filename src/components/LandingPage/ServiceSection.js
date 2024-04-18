@@ -1,21 +1,46 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
-const ServiceCard = ({ image }) => {
+const ServiceCard = ({ image, title, content }) => {
   return (
-    <div className="max-w-xs overflow-hidden justify-center items-center mx-auto">
-      <div className="flex items-center justify-center bg-white shadow-inner rounded-md py-3 mx-4 shadow-black px-4">
-        <Image src={image} alt={`Image `} className="w-48 h-48" />
+    <div className="relative max-w-xs overflow-hidden justify-center items-center mx-auto manrope">
+      <div className="flex items-center justify-center bg-white ">
+        <Image src={image} alt={`Service`} className="w-52 h-52" />
+        <div className="absolute top-0 left-0 w-auto h-full opacity-0 hover:opacity-100 grid grid-cols-1 gap-1 transition-opacity duration-300 items-center justify-center bg-black bg-opacity-50 text-white shadow-inner rounded-md mx-auto cursor-pointer shadow-black px-4 py-6">
+          <h3 className="text-center font-bold text-2xl">{title}</h3>
+          <p className="text-center text-lg">{content}</p>
+        </div>
       </div>
     </div>
   );
 };
 
-function ServiceSection({ images }) {
+function ServiceSection({ services }) {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center mx-2 px-2 sm:mx-auto">
-      {images.map((image, index) => (
-        <ServiceCard key={index} image={image} />
+      {services.map((service, index) => (
+        <div
+          key={index}
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <ServiceCard
+            image={service.image}
+            content={service.content}
+            title={service.title}
+          />
+        </div>
       ))}
     </div>
   );
