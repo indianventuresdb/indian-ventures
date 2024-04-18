@@ -45,6 +45,14 @@ const Industries = () => {
 
   return (
     <div className="w-full text-black">
+      <h2 className="font-bold text-3xl text-black mb-3 manrope mt-20 text-center">
+        Industries We Serve
+      </h2>
+
+      <p className=" font-medium text-lg sm:text-xl pb-5 text-center ">
+        We make happy clients by interconnecting technology with business & art.
+      </p>
+
       <div className="max-w-screen-2xl mx-auto px-3 ">
         <Carousel
           autoPlay={true}
