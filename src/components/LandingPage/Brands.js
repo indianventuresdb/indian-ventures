@@ -3,10 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import max from "@/assets/clients/max.jpg";
-import ipca from "@/assets/clients/ipca.webp";
-
-const brands = [ipca, max, ipca, max, ipca, max, ipca, max];
+import { logos } from "@/assets/clients";
 
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 1424 }, items: 4 },
@@ -20,7 +17,7 @@ const Brands = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % brands.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % logos.length);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -28,7 +25,7 @@ const Brands = () => {
 
   const goToSlide = (step) => {
     setCurrentSlide(
-      (prevSlide) => (prevSlide + step + brands.length) % brands.length
+      (prevSlide) => (prevSlide + step + logos.length) % logos.length
     );
   };
 
@@ -45,7 +42,7 @@ const Brands = () => {
           containerClass="carousel-container"
           arrows={false}
         >
-          {brands.map((brand, index) => (
+          {logos.map((brand, index) => (
             <div
               key={index}
               className="max-w-xs overflow-hidden justify-center items-center mx-auto mt-10"

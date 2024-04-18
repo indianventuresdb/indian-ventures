@@ -3,18 +3,20 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
-import ecom from "@/assets/industry/ecom.png";
-import healthcare from "@/assets/industry/healthcare.png";
+import { FcShop } from "react-icons/fc";
+import { GiHealthDecrease } from "react-icons/gi";
+import { MdLocalPharmacy } from "react-icons/md";
+import { GrTechnology } from "react-icons/gr";
+import { FcAutomotive } from "react-icons/fc";
+import { BsBank } from "react-icons/bs";
 
 const INDUSTRIES = [
-  { image: ecom, name: "E-Commerce" },
-  { image: healthcare, name: "Healthcare" },
-  { image: ecom, name: "E-Commerce" },
-  { image: healthcare, name: "Healthcare" },
-  { image: ecom, name: "E-Commerce" },
-  { image: healthcare, name: "Healthcare" },
-  { image: ecom, name: "E-Commerce" },
-  { image: healthcare, name: "Healthcare" },
+  { image: <FcShop />, name: "E-Commerce" },
+  { image: <GiHealthDecrease />, name: "Healthcare", color: "red" },
+  { image: <MdLocalPharmacy />, name: "Pharma" },
+  { image: <GrTechnology />, name: "Technology" },
+  { image: <FcAutomotive />, name: "Automotive" },
+  { image: <BsBank />, name: "Finance" },
 ];
 
 const responsive = {
