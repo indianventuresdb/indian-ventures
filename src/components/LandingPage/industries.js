@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Image from "next/image";
 import { FcShop } from "react-icons/fc";
 import { GiHealthDecrease } from "react-icons/gi";
 import { MdLocalPharmacy } from "react-icons/md";
@@ -11,12 +10,15 @@ import { FcAutomotive } from "react-icons/fc";
 import { BsBank } from "react-icons/bs";
 
 const INDUSTRIES = [
-  { image: <FcShop />, name: "E-Commerce" },
-  { image: <GiHealthDecrease />, name: "Healthcare", color: "red" },
-  { image: <MdLocalPharmacy />, name: "Pharma" },
-  { image: <GrTechnology />, name: "Technology" },
-  { image: <FcAutomotive />, name: "Automotive" },
-  { image: <BsBank />, name: "Finance" },
+  { Icon: FcShop, name: "E-Commerce", color: "#001F3F" },
+  { Icon: GiHealthDecrease, name: "Healthcare", color: "#007BFF" },
+  { Icon: MdLocalPharmacy, name: "Pharma", color: "#28A745" },
+  { Icon: GrTechnology, name: "Technology", color: "#20C997" },
+  { Icon: FcShop, name: "E-Commerce", color: "#001F3F" },
+  { Icon: FcAutomotive, name: "Automotive", color: "#DC3545" },
+  { Icon: BsBank, name: "Bank", color: "#00CCC7" },
+  { Icon: GrTechnology, name: "Technology", color: "#20C997" },
+  { Icon: FcAutomotive, name: "Automotive", color: "#DC3545" },
 ];
 
 const responsive = {
@@ -65,12 +67,11 @@ const Industries = () => {
               key={index}
               className="max-w-xs overflow-hidden justify-center items-center mx-auto"
             >
-              <div className="flex items-center justify-center">
-                <Image
-                  src={industry.image}
-                  alt={industry.name}
-                  className="w-28 h-32 "
-                />
+              <div
+                className="flex items-center justify-center "
+                style={{ color: industry.color }}
+              >
+                <industry.Icon className="w-28 h-28 " />
               </div>
               <p className="justify-center text-center manrope font-bold text-lg">
                 {industry.name}
