@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { api } from "@/components/fetch/api";
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,8 +24,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await api("/api/contactForm", formData);
-      if (response) {
+      const response = await axios.post("/api/cForm", formData);
+      if (response.data.success) {
         console.log("Form submitted successfully");
         setPopupMessage(
           "Thank You! for contacting us. We will get back to you soon!"
