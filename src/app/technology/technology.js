@@ -1,9 +1,8 @@
 import React from "react";
-import ImageCard from "./ImageCard";
-import CarouselSection from "./carouselSection";
 import { mobileImages, cmsImages, techImages } from "@/assets";
+import TechSection from "./techSection";
 
-const Technology = ({ userInfo }) => {
+const Technology = () => {
   return (
     <>
       <div className="sm:space-y-0 mb-5" style={{ fontFamily: "sans-serif" }}>
@@ -11,21 +10,21 @@ const Technology = ({ userInfo }) => {
         <h1 className="text-2xl sm:text-4xl text-black text-center mt-4 font-bold mb-4">
           TECHNOLOGIES
         </h1>
-        <CarouselSection
+        <TechSection
           title="Mobile Applications"
           images={mobileImages}
           sectionClass="mobile-section"
         />
 
         {/* CMS section */}
-        <CarouselSection
+        <TechSection
           title="Content Management System (CMS)"
           images={cmsImages}
           sectionClass="CMS-section"
         />
 
         {/* Tech section */}
-        <CarouselSection
+        <TechSection
           title="Technology"
           images={techImages}
           sectionClass="tech-section"

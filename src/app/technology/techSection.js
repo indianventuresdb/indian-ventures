@@ -28,7 +28,7 @@ import {
   image154,
 } from "@/assets";
 
-const CarouselSection = ({ title, sectionClass, heading }) => {
+const TechSection = ({ title, sectionClass, heading }) => {
   const mobileLinks = [
     { text: "Android", imageUrl: image146 },
     { text: "iOS", imageUrl: image147 },
@@ -54,18 +54,9 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
     { text: "Express.Js", imageUrl: image141 },
   ];
 
-  const mobElementPos = [
-    { top: "50px", left: "16%" },
-    { top: "50px", left: "80%" },
-    { top: "120px", left: "50%" },
-    { top: "50px", left: "50%" },
-    { top: "120px", left: "16%" },
-    { top: "120px", left: "80%" },
-  ];
-
   const cmsSlide = [cms1, cms2, cms3];
   const techSlide = [tech1, tech2, tech3];
-  const mobileSLide = [mobile1, mobile2, mobile3];
+  const mobileSlide = [mobile1, mobile2, mobile3];
 
   let displayedImages;
   if (sectionClass === "CMS-section") {
@@ -73,7 +64,7 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
   } else if (sectionClass === "tech-section") {
     displayedImages = techSlide;
   } else if (sectionClass === "mobile-section") {
-    displayedImages = mobileSLide;
+    displayedImages = mobileSlide;
   }
   const getImages = () => {
     switch (sectionClass) {
@@ -92,11 +83,6 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
       <div
         key={index}
         className="flex flex-col items-center manrope justify-center"
-        style={{
-          top: mobElementPos[index]?.top || "0",
-          left: mobElementPos[index]?.left || "0",
-          transform: "translate(-50%, -50%)",
-        }}
       >
         <Image
           src={link.imageUrl}
@@ -106,7 +92,7 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
           height={50}
           className="max-w-60 max-h-60"
         />
-        <p className="text-center text-xs sm:text-lg font-medium">
+        <p className="text-center text-sm font-semibold sm:text-lg">
           {link.text}
         </p>
       </div>
@@ -120,14 +106,14 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
           {title}
         </h3>
         <div className="bg-[#ECECEC] shadow-md shadow-black w-full flex flex-wrap">
-          <div className="w-full sm:w-1/2 ">
-            <div style={{ height: "100%" }}>
-              <Carousel images={displayedImages} h={340} w={960 / 3} />
+          <div className="w-full xl:w-1/2 ">
+            <div className="">
+              <Carousel images={displayedImages} h={250} w={340} />
             </div>
           </div>
-          <div className="w-full sm:w-1/2 ">
-            <div className="flex justify-center text-center sm:text-lg text-sm tracking-widest leading-5 px-5">
-              <p className="pt-10 pb-2  font-bold">
+          <div className="w-full xl:w-1/2">
+            <div className="max-h-[20rem] sm:max-h-[30rem] lg:max-h-[40rem] flex justify-center text-center sm:text-xl text-lg px-5 pt-7 sm:pt-2">
+              <p className="py-2 font-bold">
                 Exclusive{" "}
                 {sectionClass === "mobile-section"
                   ? "mobile application"
@@ -137,8 +123,10 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
                 services we provide to enhance your growth
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3  px-16 py-20 gap-x-20 gap-y-12 sm:px-48 sm:pt-32 sm:gap-x-14 sm:gap-y-32   justify-center items-center mx-auto">
-              {renderImages()}
+            <div className="flex justify-center mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  pt-10 sm:pt-16 gap-x-16 gap-y-16 pb-5 sm:pb-0">
+                {renderImages()}
+              </div>
             </div>
           </div>
         </div>
@@ -147,4 +135,4 @@ const CarouselSection = ({ title, sectionClass, heading }) => {
   );
 };
 
-export default CarouselSection;
+export default TechSection;
