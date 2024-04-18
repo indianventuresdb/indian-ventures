@@ -12,15 +12,15 @@ const Page = () => {
           className="object-cover w-[1531px] h-[621px] mx-auto"
         />
         <div className="absolute inset-0  flex flex-col justify-center items-center text-white bg-gray-900 bg-opacity-75 manrope">
-          <h1 className="text-2xl md:text-3xl font-extrabold sm:mb-6 mb-2 uppercase">
+          <h1 className="text-3xl  md:text-xl lg:text-xl xl:text-3xl font-extrabold sm:mb-6 mb-2 uppercase">
             About Us
           </h1>
-          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl px-2 sm:px-20 ">
+          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl  ">
             At the interaction of art technology and bussiness , We create
             design and <br />
             solution geared towards bussiness success.
           </p>
-          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl sm:px-48 px-2">
+          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl  px-2">
             We are growing in design technology. Our services range from
             experience designing,
             <br /> identity development, product strategy, branding, user
@@ -28,13 +28,13 @@ const Page = () => {
             <br />
             development to digital marketing and SEO.
           </p>
-          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl sm:px-48 px-2">
+          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl  px-2">
             Our work has inspired positive business growth for many of our
             clients, including Decathlon,
             <br /> Dios, Max, Unity World Pageants, United Nations Pageants, and
             more.
           </p>
-          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl sm:px-48 px-2">
+          <p className="text-center sm:mb-6 mb-2 text-sm sm:text-xl  px-2">
             Today, when a brand's virtual persona is imperative to business
             success, Indian Ventures strives to
             <br /> provide insightful and future-forward solutions designed
