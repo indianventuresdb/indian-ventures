@@ -22,10 +22,11 @@ export default async function handler(req, res) {
       };
 
       await transporter.sendMail(mailOptions);
+      console.log("sending email:", text); // Log the error
 
       res.status(200).json({ message: "Data Submitted" });
     } catch (error) {
-      console.error(error);
+      console.error("Error sending email:", error); // Log the error
       res.status(500).json({ message: "Internal Server Error" });
     }
   } else {
