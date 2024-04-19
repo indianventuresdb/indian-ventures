@@ -1,4 +1,4 @@
-// pages/api/contact.js
+// pages/api/contact/route.js
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         from: process.env.NEXT_EMAIL,
         to: process.env.NEXT_EMAIL_RECEVER,
         subject: "New Query",
-        text: `Name: ${data.name}\nBrand: ${data.brand}\nEmail: ${data.email}\nPhone: ${data.phone}\nDetails: ${data.details}`,
+        text: `Name: ${data.name}\nPhone: ${data.phone}\Organization: ${data.organization}\nEmail: ${data.email}\Message: ${data.message}`,
       };
 
       await transporter.sendMail(mailOptions);

@@ -1,26 +1,33 @@
-export const api = async (path, data) => {
-  try {
-    // Make a POST request to the specified API endpoint
+// pages/api/form/route.js
+import nodemailer from "nodemailer";
 
-    const response = await fetch(path, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ data: data }),
-    });
-    // If the response is not successful, throw an error
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    try {
+      const data = req.body;
+      const transporter = nodemailer.createTransport({
+        service: "GMAIL",
+        auth: {
+          user: process.env.NEXT_EMAIL,
+          pass: process.env.NEXT_PASSWORD,
+        },
+      });
 
-    if (!response.ok) {
-      throw new Error("Request failed");
+      const mailOptions = {
+        from: process.env.NEXT_EMAIL,
+        to: process.env.NEXT_EMAIL_RECEVER,
+        subject: "New Form Submission",
+        text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nBrand: ${data.brand}\nService: ${data.service}\nBudget: ${data.budget}\nMessage: ${data.message}`,
+      };
+
+      await transporter.sendMail(mailOptions);
+
+      res.status(200).json({ message: "Form submitted successfully" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal Server Error" });
     }
-    // Return true to indicate a successful request
-
-    return true;
-  } catch (error) {
-    console.error(error);
-    // Return false to indicate a failed request
-
-    return false;
+  } else {
+    res.status(405).end();
   }
-};
+}
