@@ -9,8 +9,6 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,42 +18,17 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form Data Submitted:", formData);
 
-    try {
-      const response = await axios.post("/api/cForm", formData);
-      if (response.data.success) {
-        console.log("Form submitted successfully");
-        setPopupMessage(
-          "Thank You! for contacting us. We will get back to you soon!"
-        );
-
-        setShowPopup(true);
-        setFormData({
-          name: "",
-          phone: "",
-          organization: "",
-          email: "",
-          message: "",
-        });
-
-        setTimeout(() => {
-          setShowPopup(false);
-        }, 5000);
-        const res = await axios(
-          `/api/fbc?path=${process.env.NEXT_PUBLIC_HOST}contact`
-        );
-      } else {
-        console.error("Form submission failed");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
+    setFormData({
+      name: "",
+      phone: "",
+      organization: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
@@ -147,7 +120,10 @@ const ContactForm = () => {
           </div>
 
           <div className="flex justify-center mt-6">
-            <button className="rounded-xl sm:px-32 px-6 py-2 border-2 border-gray-50 bg-black text-white hover:bg-gray-800 text-lg sm:text-xl uppercase">
+            <button
+              type="submit"
+              className="rounded-xl sm:px-32 px-6 py-2 border-2 border-gray-50 bg-black text-white hover:bg-gray-800 text-lg sm:text-xl uppercase"
+            >
               Submit
             </button>
           </div>
