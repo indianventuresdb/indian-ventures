@@ -1,6 +1,8 @@
 import React from "react";
-import slider1 from "@/assets/slider/slider1.jpeg";
-import slider2 from "@/assets/slider/slider2.jpeg";
+import slider1 from "@/assets/slider/slider1.png";
+import slider2 from "@/assets/slider/slider2.png";
+import slider3 from "@/assets/slider/slider3.png";
+import slider4 from "@/assets/slider/slider4.png";
 
 import Carousel from "../Slider/slider";
 import Heading from "../UIElements/Heading";
@@ -50,7 +52,11 @@ function HeroSection() {
 
   return (
     <div className=" justify-center h-auto space-y-10 mb-1 manrope">
-      <Carousel images={[slider1, slider2]} h={420} w={1152} />
+      <Carousel
+        images={[slider1, slider2, slider3, slider4]}
+        h={600}
+        w={1512}
+      />
       <Heading>Our Services</Heading>
       <p className="text-center font-normal text-lg">
         No Compromise Solution To Your Web Or App Development
