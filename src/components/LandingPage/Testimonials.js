@@ -65,7 +65,7 @@ const Testimonials = () => {
           {testimonialsData.map((review, index) => (
             <div
               key={index}
-              className="px-2 mt-10 max-w-xs mx-auto bg-card rounded-sm overflow-hidden p-6 py-6 bg-[#D9D9D9] shadow-2xl manrope"
+              className="px-2 mt-10 max-w-xs max-h-36 mx-auto bg-card rounded-sm overflow-hidden p-6 py-6 bg-[#D9D9D9] shadow-2xl manrope"
             >
               <h3 className="text-sm sm:text-xl font-bold text-center">
                 {review.heading}
