@@ -8,6 +8,8 @@ const Page = () => {
       <div className="relative ">
         <Image
           src={backgroundImage}
+          width={1531}
+          height={621}
           alt="backgroundImage"
           className="object-cover w-[1531px] h-[621px] mx-auto"
         />
