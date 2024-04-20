@@ -10,24 +10,20 @@ export default async function submitContact(formData) {
     },
   });
 
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const organization = formData.get("organization");
-  const email = formData.get("email");
-  const message = formData.get("message");
+  const { name, phone, organization, email, message } = formData;
 
   try {
     const info = await transporter.sendMail({
       from: process.env.NEXT_EMAIL,
-      to: process.env.NEXT_EMAIL_RECEIVER,
+      to: process.env.NEXT_EMAIL_RECEVER,
       subject: "New Query",
       text: `Name: ${name}\nPhone: ${phone}\nOrganization: ${organization}\nEmail: ${email}\nMessage: ${message}`,
     });
 
     console.log("Email sent: " + info.response);
-    return { success: true };
+    return JSON.stringify({ success: true });
   } catch (error) {
     console.error("Error occurred: ", error);
-    return { success: false };
+    return JSON.stringify({ false: error });
   }
 }
