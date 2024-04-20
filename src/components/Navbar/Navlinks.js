@@ -9,6 +9,9 @@ const Navlinks = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="flex items-center justify-between px-6  manrope ">
@@ -56,6 +59,7 @@ const Navlinks = () => {
         <div className="md:hidden absolute top-16 left-0 w-[60%] sm:w-1/3 h-80 bg-white z-50 flex flex-col px-2 pt-10 py-4">
           <Link
             href="/"
+            onClick={closeMenu}
             className="text-mblack
              text-lg font-semibold mb-4 hover:text-gray-500"
           >
@@ -63,6 +67,7 @@ const Navlinks = () => {
           </Link>
           <Link
             href="/about"
+            onClick={closeMenu}
             className="text-mblack
              text-lg font-semibold mb-4 hover:text-gray-500"
           >
@@ -70,6 +75,7 @@ const Navlinks = () => {
           </Link>
           <Link
             href="/technology"
+            onClick={closeMenu}
             className="text-mblack
              text-lg font-semibold mb-4 hover:text-gray-500"
           >
@@ -77,6 +83,7 @@ const Navlinks = () => {
           </Link>
           <Link
             href="/services"
+            onClick={closeMenu}
             className="text-mblack
              text-lg font-semibold mb-4 hover:text-gray-500"
           >
@@ -84,6 +91,7 @@ const Navlinks = () => {
           </Link>
           <Link
             href="/contact"
+            onClick={closeMenu}
             className="text-mblack
              text-lg font-semibold hover:text-gray-500"
           >

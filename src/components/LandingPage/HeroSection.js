@@ -3,7 +3,6 @@ import slider1 from "@/assets/slider/slider1.png";
 import slider2 from "@/assets/slider/slider2.png";
 import slider3 from "@/assets/slider/slider3.png";
 import slider4 from "@/assets/slider/slider4.png";
-
 import Carousel from "../Slider/slider";
 import Heading from "../UIElements/Heading";
 import ServiceSection from "./ServiceSection";

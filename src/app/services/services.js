@@ -49,13 +49,13 @@ const pageData = [
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-1 gap-8 mx-3 sm:mx-32">
+    <div className="grid grid-cols-1 gap-8 mx-3 md:mx-10">
       {pageData.map((service, index) => (
         <div
           key={index}
-          className="grid grid-cols-1 md:grid-cols-2 border-4 border-[#D9D9D9] shadow-md sm:rounded-3xl bg-[#ECECEC] "
+          className="grid grid-cols-1 md:grid-cols-2 border-4 border-[#D9D9D9] shadow-md md:rounded-3xl bg-[#ECECEC] "
         >
-          <div className=" w-full lg:w-[80%] relative  min-h-[16rem] sm:rounded-t-3xl sm:rounded-bl-3xl ">
+          <div className=" w-full lg:w-[80%] relative  min-h-[16rem] md:rounded-t-3xl md:rounded-bl-3xl ">
             <Image
               src={service.image}
               alt={`Service ${index + 1}`}
@@ -64,7 +64,7 @@ const Services = () => {
               className=" md:rounded-l-3xl sm:rounded-none"
             />
           </div>
-          <div className="w-full lg:w-[80%] flex flex-col justify-center">
+          <div className="w-full lg:w-[80%] min-h-[16rem] flex flex-col justify-center py-6">
             <h2 className="text-xl font-bold mb-4 text-center">
               {service.heading}
             </h2>
