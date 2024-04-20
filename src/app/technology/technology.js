@@ -1,5 +1,4 @@
 import React from "react";
-import { mobileImages, cmsImages, techImages } from "@/assets";
 import TechSection from "./techSection";
 
 const Technology = () => {
@@ -12,23 +11,17 @@ const Technology = () => {
         </h1>
         <TechSection
           title="Mobile Applications"
-          images={mobileImages}
           sectionClass="mobile-section"
         />
 
         {/* CMS section */}
         <TechSection
           title="Content Management System (CMS)"
-          images={cmsImages}
           sectionClass="CMS-section"
         />
 
         {/* Tech section */}
-        <TechSection
-          title="Technology"
-          images={techImages}
-          sectionClass="tech-section"
-        />
+        <TechSection title="Technology" sectionClass="tech-section" />
       </div>
     </>
   );
