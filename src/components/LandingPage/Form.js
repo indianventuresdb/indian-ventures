@@ -1,6 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import submitContact from "@/actions/contactForm";
 const Form = () => {
+  const [status, setStatus] = useState("");
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -20,8 +23,7 @@ const Form = () => {
   const [phoneNumberInput, setPhoneNumberInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     console.log("Form Data Submitted:", data);
 
     if (data.name == "") {
@@ -40,6 +42,17 @@ const Form = () => {
       setIsValidBudget(false);
     }
 
+    try {
+      const response = await submitContact(data);
+      if (response.status === 200) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+      console.error("Error occurred:", error);
+    }
     setData({
       name: "",
       email: "",
