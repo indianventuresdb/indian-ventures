@@ -1,7 +1,7 @@
 "use server";
 import nodemailer from "nodemailer";
 
-export default async function submitContact(formData) {
+export default async function submitForm(data) {
   const transporter = nodemailer.createTransport({
     service: "GMAIL",
     auth: {
@@ -10,14 +10,14 @@ export default async function submitContact(formData) {
     },
   });
 
-  const { name, email, phone, brand, service, budget, message } = formData;
+  const { name, email, phone, brand, service, budget, message } = data;
 
   try {
     const info = await transporter.sendMail({
       from: process.env.NEXT_EMAIL,
       to: process.env.NEXT_EMAIL_RECEVER,
       subject: "New Query",
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nBrand:${brand}\nService:${service}\nBudget:${budget}\nOrganization: ${organization}\n\nMessage: ${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nBrand:${brand}\nService:${service}\nBudget:${budget}\nMessage: ${message}`,
     });
 
     console.log("Email sent: " + info.response);

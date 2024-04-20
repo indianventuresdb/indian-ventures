@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import submitContact from "@/actions/contactForm";
+import submitForm from "@/actions/form";
 const Form = () => {
   const [status, setStatus] = useState("");
 
@@ -43,7 +43,7 @@ const Form = () => {
     }
 
     try {
-      const response = await submitContact(data);
+      const response = await submitForm(data);
       if (response.status === 200) {
         setStatus("success");
       } else {
@@ -53,15 +53,6 @@ const Form = () => {
       setStatus("error");
       console.error("Error occurred:", error);
     }
-    setData({
-      name: "",
-      email: "",
-      brand: "",
-      phone: "",
-      service: "",
-      budget: "",
-      message: "",
-    });
   };
 
   const handleChange = (e) => {
