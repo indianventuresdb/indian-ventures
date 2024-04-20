@@ -1,6 +1,10 @@
 "use client";
 import { useState } from "react";
+import submitContact from "@/actions/contactForm";
+
 const ContactForm = () => {
+  const [status, setStatus] = useState("");
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -17,24 +21,25 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     console.log("Form Data Submitted:", formData);
-
-    setFormData({
-      name: "",
-      phone: "",
-      organization: "",
-      email: "",
-      message: "",
-    });
+    try {
+      const response = await submitContact(formData);
+      if (response.status === 200) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+      console.error("Error occurred:", error);
+    }
   };
-
   return (
     <>
       <div className="border-2 border-[#D9D9D9] py-16 mt-8 px-4 sm:mx-36 mx-2  rounded-2xl shadow-md shadow-black">
         <form
-          onSubmit={handleSubmit}
+          action={handleSubmit}
           className="max-w-[1000px] mx-auto grid gap-4"
           style={{ fontFamily: "lato" }}
         >

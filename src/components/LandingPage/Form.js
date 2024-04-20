@@ -101,7 +101,8 @@ const Form = () => {
       </h3>
       <div className="bg-[#D9D9D9] py-10 mt-8  px-4">
         <form
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
+          action={handleSubmit}
           className="top-0 z-20 w-full max-w-[75rem] mx-auto"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 text-lg sm:text-xl  gap-4  mb-4">
