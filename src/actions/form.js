@@ -21,9 +21,9 @@ export default async function submitForm(data) {
     });
 
     console.log("Email sent: " + info.response);
-    return JSON.stringify({ success: true });
+    return { success: true, message: "Email Sent Successfully" };
   } catch (error) {
     console.error("Error occurred: ", error);
-    return JSON.stringify({ false: error });
+    return { success: false, message: "There was an Error" };
   }
 }
