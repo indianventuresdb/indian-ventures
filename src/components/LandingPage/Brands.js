@@ -51,8 +51,8 @@ const Brands = () => {
                 <Image
                   src={brand}
                   alt={`Brand ${index}`}
-                  width={20}
-                  height={20}
+                  width={200}
+                  height={200}
                   className="w-24 h-32"
                 />
               </div>
