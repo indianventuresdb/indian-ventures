@@ -56,7 +56,7 @@ const Navlinks = () => {
         <BsList className="h-8 w-8 text-mblack" />
       </div>
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-[60%] sm:w-1/3 h-80 bg-white z-50 flex flex-col px-2 pt-10 py-4">
+        <div className="md:hidden absolute top-16 right-0 w-[70%] sm:w-1/3 h-80 bg-white z-50 flex flex-col px-4 py-4 pt-6 ">
           <Link
             href="/"
             onClick={closeMenu}
