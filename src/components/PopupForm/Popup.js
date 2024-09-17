@@ -81,9 +81,9 @@ const PopupForm = () => {
       isValid = false;
     }
 
-    // Organization Validation
+    // Organisation Validation
     if (!formData.organisation.trim()) {
-      formErrors.organisation = "Organization is required";
+      formErrors.organisation = "Organisation is required";
       isValid = false;
     }
 
@@ -194,7 +194,7 @@ const PopupForm = () => {
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
-                  Organization
+                  Organisation
                 </label>
                 <input
                   type="text"
@@ -202,7 +202,7 @@ const PopupForm = () => {
                   value={formData.organisation}
                   onChange={handleChange}
                   className="w-full mt-1 p-2 border border-gray-300 rounded"
-                  placeholder="Enter your Organization"
+                  placeholder="Enter your Organisation"
                 />
                 {errors.organisation && (
                   <p className="text-red-500 text-xs mt-1">
