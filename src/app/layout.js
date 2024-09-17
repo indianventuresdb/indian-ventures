@@ -3,8 +3,8 @@ import { Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Image from "next/image"; // Import the Next.js Image component
-import Link from "next/link"; // Import the Next.js Link component
+import Image from "next/image";
+import Link from "next/link";
 
 const manrope_init = Manrope({
   subsets: ["latin"],
@@ -27,17 +27,14 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${manrope_init.variable}`}>
         <Navbar />
-        {/* Public Image and Title */}
         <div className="flex justify-center items-center mt-4">
-          {/* Link wraps the logo and title to link back to the homepage */}
           <Link href="/">
             <a className="flex items-center">
-              {/* Using Next.js Image component */}
               <Image
-                src="/favicon.ico" // Path to the image in the public folder
+                src="/favicon.ico"
                 alt="Site Logo"
-                width={48} // Adjust the width as needed
-                height={48} // Adjust the height as needed
+                width={48}
+                height={48}
                 className="mr-2"
               />
               <h1 className="text-3xl font-bold">{metadata.title}</h1>
