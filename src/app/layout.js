@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Favicon for browser tab */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <title>{metadata.title}</title>
       </head>
