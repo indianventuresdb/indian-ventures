@@ -26,18 +26,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${manrope_init.variable}`}>
         <Navbar />
-        <div className="flex justify-center items-center mt-4">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/favicon.ico"
-              alt="Site Logo"
-              width={48}
-              height={48}
-              className="mr-2"
-            />
-            <h1 className="text-3xl font-bold">{metadata.title}</h1>
-          </Link>
-        </div>
+
         <div className="max-w-screen-2xl mx-auto">{children}</div>
         <Footer />
       </body>
